@@ -2,6 +2,10 @@
 a{text-decoration: none; color: #fff;}
 ul li{list-style: none;}
 
+body {
+    font-size: 10px;
+}
+
 .header {
     .container {
         display: grid;
@@ -18,11 +22,13 @@ ul li{list-style: none;}
 .navigation {
     background-color: #7acec3;
     position: relative;
+    background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
+    background-repeat: no-repeat;
 }
 
 .logo-img {
-    max-width: 160px;
-    max-height: 205px;
+    max-width: 160px; // 16rem;
+    max-height: 205px; // 20.5rem;
     z-index: 1;
 }
 
@@ -52,6 +58,7 @@ ul li{list-style: none;}
 .image-block {
     img {
         width: 490px;
+        // 1rem = 16px;
     }
 
     margin-left: 90px;

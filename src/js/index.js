@@ -5,6 +5,8 @@ const navButton = document.getElementById("nav-btn")
 const line = document.querySelectorAll(".line")
 const navBlock = document.getElementById("nav-block")
 
+// window.innerWidth
+
 let lis = 1
 
 navButton.addEventListener("click", () => {
