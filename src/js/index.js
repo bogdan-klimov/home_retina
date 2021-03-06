@@ -1,13 +1,19 @@
-import '../styles/styles.css';
 import '../styles/styles.scss';
 
-const navButton = document.getElementById("nav-btn")
-const line = document.querySelectorAll(".line")
-const navBlock = document.getElementById("nav-block")
+const navButton = document.getElementById("nav-btn");
+const line = document.querySelectorAll(".line");
+const navBlock = document.getElementById("nav-block");
 
-// const chairBlock = document.getElementsByClassName("chairs-block")[0];
+const blockHeight = document.getElementsByClassName('block-height')[0];
 
-// chairBlock.style.height = window.innerWidth / 3 + "px"
+const currWidth = window.innerWidth;
+const sectionHeight = currWidth / 3;
+
+blockHeight.style.height = `${sectionHeight}px`;
+
+// blockHeight.addEventListener('click', () => {
+//     console.log(window.innerWidth);
+// })
 
 
 let lis = 1
