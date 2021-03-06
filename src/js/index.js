@@ -5,7 +5,10 @@ const navButton = document.getElementById("nav-btn")
 const line = document.querySelectorAll(".line")
 const navBlock = document.getElementById("nav-block")
 
-// window.innerWidth
+// const chairBlock = document.getElementsByClassName("chairs-block")[0];
+
+// chairBlock.style.height = window.innerWidth / 3 + "px"
+
 
 let lis = 1
 
@@ -27,7 +30,7 @@ navButton.addEventListener("click", () => {
 })
 
 const iconsArrow = document.getElementsByClassName("icon-right-product");
-const projectText = document.getElementsByClassName("projects-text");
+const projectText = document.getElementsByClassName("projects-item");
 
 
 for (let i = 0; i < projectText.length; i++) {
