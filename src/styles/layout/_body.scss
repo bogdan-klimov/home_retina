@@ -2,13 +2,18 @@
     overflow: hidden;
     &-block {
         display: grid;
-        grid-auto-rows: 25rem;
+        // grid-auto-rows: 25rem;
+        // 0.31
+        // 0.37
+        // 0.32
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        // grid-template-columns: 32fr 35.5fr 30.5fr;
+        // grid-template-columns: 417px 730px 400px;
         &-item {
-            // background-color: red;
             &-project {
                 position: relative;
                 background-color: #ebb240;
+                background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
             }
         }
         &-item:nth-child(1), &-item:nth-child(2){
@@ -157,8 +162,8 @@
 
 .projects {
     position: absolute;
-    left: 15rem;
-    top: 15rem;
+    left: 30%;
+    top: 32%;
     &-item {
         display: flex;
         cursor: pointer;
@@ -187,8 +192,8 @@
     color: #fefefe;
     font-weight: 400;
     position: absolute;
-    top: 29rem;
-    left: 23.5rem;
+    top: 60%;
+    left: 50%;
 }
 
 .potter-block-description {
@@ -240,7 +245,12 @@
 .louis-block {
     padding: 3.3rem 0 0 4rem;
     background-image: url(../img/louis-background.png);
+    background-position: center;
+    background-size: cover;
     &-desc {
+        .def-h2 {
+            color: #fff;
+        }
         &-text {
             max-width: 25.2rem;
             font-size: 1.4rem;
@@ -273,7 +283,7 @@
 
 .p22-block {
     display: flex;
-    padding: 6.5rem 0 0 9.5rem;
+    padding: 6.5rem 6.6rem 0 9.5rem;
     position: relative;
     background-color: #eaeaea;
     &-desc {
@@ -286,7 +296,7 @@
         }
     }
     .p22-block-social {
-        margin-left: 2rem;
+        margin-left: auto;
         .like-block {
             margin: 2rem 0 0 7rem;
         }
@@ -323,13 +333,13 @@
 
 .project-time-line {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 49fr 20fr 31fr;
 }
 
 .sensann-block {
     padding: 2.5rem 10.5rem;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    // grid-column-start: 1;
+    // grid-column-end: 4;
     background-color: #fff;
     &-desc {
         margin-top: 3rem;
@@ -355,9 +365,9 @@
 
 .alessi-block {
     padding: 9rem 0 0 13rem;
-    grid-column-start: 4;
+    // grid-column-start: 4;
     display: flex;
-    grid-column-end: 5;
+    // grid-column-end: 5;
     position: relative;
     overflow: hidden;
     background-color: #cecece;
@@ -392,8 +402,8 @@
 .time-line-block {
     background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
     overflow: hidden;
-    grid-column-start: 5;
-    grid-column-end: 7;
+    // grid-column-start: 5;
+    // grid-column-end: 7;
     background-color: #ebb240;
     position: relative;
     &-head {
@@ -407,9 +417,13 @@
         font-weight: 400;
         font-family: "Roboto Condensed", sans-serif;
     }
+    .time-line-wrapper {
+        position: absolute;
+        top: 15%;
+        left: 25%;
+    }
     .projects {
-        top: 5rem;
-        left: 10rem;
+        position: static;
         &-text-time {
             font-size: 1.3rem;
             line-height: 1.4rem;
@@ -428,7 +442,7 @@
 .studio {
     .container {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 31fr 69fr;
     }
     &-block {
         background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
@@ -437,8 +451,8 @@
         height: 50rem;
         position: relative;
         &-head {
-            top: 29rem;
-            left: 25rem;
+            top: 55%;
+            left: 50%;
             text-transform: uppercase;
             position: absolute;
             font-size: 4.8rem;
@@ -510,11 +524,11 @@
     background-color: #e9eae2;
     .container {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 31fr 69fr;
     }
     &-desc {
         height: 40rem;
-        padding: 10rem 0 0 20rem; 
+        padding: 10rem 0 0 15rem; 
         max-width: 27rem;
         grid-column-start: 1fr;
         grid-column-end: 2fr;;
@@ -582,8 +596,9 @@
 }
 
 .designer-block-social {
-    a {
+    .designer-icon {
         color: #fd5000;
+        font-size: 16px;
     }
 }
 
@@ -604,7 +619,7 @@
 
 .news {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 31fr 34.5fr 34.5fr;
     &-block {
         overflow: hidden;
         grid-column-start: 1;

@@ -53,10 +53,12 @@
                     <li><a href="#">news</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
-                <div class="nav-btn" id="nav-btn">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                <div class="nav-btn-wrapper" id="nav-btn">
+                    <div class="nav-btn">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
                 </div>
                 <p class="nav-block-desc">
                     90802 California
@@ -281,14 +283,16 @@
             </div>
         </div>
         <div class="time-line-block">
-            <ul class="projects">
+            <div class="time-line-wrapper">
                 <h2 class="time-line-block-head">timeline</h2>
-                <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2014</a></li>
-                <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2013</a></li>
-                <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2012</a></li>
-                <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2011</a></li>
-                <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2010</a></li>
-            </ul>
+                <ul class="projects">
+                    <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2014</a></li>
+                    <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2013</a></li>
+                    <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2012</a></li>
+                    <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2011</a></li>
+                    <li class="projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2010</a></li>
+                </ul>
+            </div>
         </div>
     </section>
     <section class="studio">
@@ -399,10 +403,10 @@
                             <div class="icon-left"></div>
                         </a>
                         <div class="designer-block-social">
-                            <a href="#" class="icon-facebook"></a>
-                            <a href="#" class="icon-twitter"></a>
-                            <a href="#" class="icon-linkedin"></a>
-                            <a href="#" class="icon-gplus"></a>
+                            <a href="#" class="icon-facebook designer-icon"></a>
+                            <a href="#" class="icon-twitter designer-icon"></a>
+                            <a href="#" class="icon-linkedin designer-icon"></a>
+                            <a href="#" class="icon-gplus designer-icon"></a>
                         </div>
                     </div>
                 </li>
@@ -418,10 +422,10 @@
                             <div class="icon-left"></div>
                         </a>
                         <div class="designer-block-social">
-                            <a href="#" class="icon-facebook"></a>
-                            <a href="#" class="icon-twitter"></a>
-                            <a href="#" class="icon-linkedin"></a>
-                            <a href="#" class="icon-gplus"></a>
+                            <a href="#" class="icon-facebook designer-icon"></a>
+                            <a href="#" class="icon-twitter designer-icon"></a>
+                            <a href="#" class="icon-linkedin designer-icon"></a>
+                            <a href="#" class="icon-gplus designer-icon"></a>
                         </div>
                     </div>
                 </li>
@@ -437,10 +441,10 @@
                             <div class="icon-left"></div>
                         </a>
                         <div class="designer-block-social">
-                            <a href="#" class="icon-facebook" class="designer-icon"></a>
-                            <a href="#" class="icon-twitter" class="designer-icon"></a>
-                            <a href="#" class="icon-linkedin" class="designer-icon"></a>
-                            <a href="#" class="icon-gplus" class="designer-icon"></a>
+                            <a href="#" class="icon-facebook designer-icon"></a>
+                            <a href="#" class="icon-twitter designer-icon"></a>
+                            <a href="#" class="icon-linkedin designer-icon"></a>
+                            <a href="#" class="icon-gplus designer-icon"></a>
                         </div>
                     </div>
                 </li>
@@ -499,7 +503,7 @@
     </secion>
     <footer class="footer">
         <div class="container">
-            <img src="img/map.png" alt="map" class="footer-map">
+            <div class="map-img"></div>
             <div class="footer-block">
                 <div class="footer-block-wrapper">
                     <div class="footer-left-part">
@@ -549,7 +553,6 @@
                         </ul>
                     </div>
                 </div>
-                
                 <span class="footer-copyright">
                     <div class="icon-copyright"></div>
                     2014  DSGN. All rights reserved - Designed by theuncreativelab.com

@@ -9,7 +9,7 @@ html {
 .header {
     .container {
         display: grid;
-        grid-template-columns: 0.69fr 0.31fr;
+        grid-template-columns: 69fr 31fr;
     }
 }
 
@@ -17,7 +17,6 @@ html {
     padding: 5rem 10rem 0 22rem;
     background-color: #e9eae2;
     display: flex;
-    // width: 100%;
     justify-content: space-between;
 }
 
@@ -64,16 +63,25 @@ html {
     margin-left: 9rem;
 }
 
-.nav-btn {
+.nav-btn-wrapper {
     width: 100%;
     height: 100%;
     max-width: 12rem;
     max-height: 12rem;
     border: 0.3rem solid #fff;
-    margin: 3.5rem 0 0 17.5rem;
-    position: relative;
+    position: absolute;
     cursor: pointer;
     z-index: 10;
+    // left: 37%;
+    // top: 7%;
+    top: 3.5rem;
+    left: 17.5rem;
+}
+
+.nav-btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-btn-active {
@@ -114,6 +122,7 @@ html {
     left: 2.5rem;
 }
 
+
 .nav-block {
     font-size: 1.4rem;
     line-height: 2.5rem;
@@ -124,6 +133,8 @@ html {
     padding: 5.1rem 15rem 5.1rem 5rem;
     background-color: #f8c255;
     position: absolute;
+    // right: 35%;
+    // top: 7%;
     top: 3.5rem; 
     left: -52rem;
     z-index: 5;
@@ -142,8 +153,8 @@ html {
     text-transform: uppercase;
     position: absolute;
     font-family: "Roboto Condensed", sans-serif;
-    top: 25rem;
-    left: 6rem;
+    top: 45%;
+    left: 15%;
 }
 
 .nav-block-social {
@@ -154,6 +165,6 @@ html {
     color: #ffffff;
     font-weight: 400;
     font-family: "Roboto Condensed", sans-serif;
-    left: 17.7rem;
-    top: 36.5rem;
+    left: 35%;
+    top: 70%;
 }
