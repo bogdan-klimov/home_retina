@@ -1,13 +1,6 @@
 import '../styles/styles.scss';
-
-import './jsFiles/heart.js';
-
-import './jsFiles/iconArrow.js';
-
-import './jsFiles/navBtn.js';
-
-import './jsFiles/currHeight.js';
-
-
-
-
+import './heart.js';
+import './iconArrow.js';
+import './iconArrowTime.js';
+import './navBtn.js';
+import './currHeight.js';

@@ -1,14 +1,15 @@
+/* 
+
+    1. Вынести все цвета, шрифты в переменные
+    2. Создать миксины
+
+**/
+
 .product {
     overflow: hidden;
     &-block {
         display: grid;
-        // grid-auto-rows: 25rem;
-        // 0.31
-        // 0.37
-        // 0.32
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        // grid-template-columns: 32fr 35.5fr 30.5fr;
-        // grid-template-columns: 417px 730px 400px;
+        grid-template-columns: repeat(6, 1fr);
         &-item {
             &-project {
                 position: relative;
@@ -55,7 +56,6 @@
         }
     }
 }
-
 
 .def-h2 {
     text-transform: uppercase;
