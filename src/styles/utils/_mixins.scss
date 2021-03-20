@@ -16,3 +16,10 @@
        + 'Пожалуйста, убедитесь, что точка останова объявлена в карте `$breakpoints`.';
   }
 }
+
+@mixin font-props ($size, $weight, $color, $lineheight) {
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+  line-height: $lineheight;
+}

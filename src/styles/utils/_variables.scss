@@ -4,3 +4,9 @@ $breakpoints: (
   'huge': (min-width: 1200px),
   'large-huge': (min-width: 1025px) and (max-width: 1200px),
 );
+
+$main-fs: 1.4rem;
+$larger-fs: 2.4rem;
+$largest-fs: 2.5rem;
+$main-family: "Roboto Condensed", sans-serif;
+$main-color: #333333;

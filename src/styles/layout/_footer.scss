@@ -1,3 +1,6 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
 .footer {
     .container {
         display: grid;
@@ -12,7 +15,7 @@
             justify-content: space-between;
         }
         background-color: #e9eae2;
-        padding: 14rem 11rem 0;
+        padding: 14rem 11rem 3rem;
     }
 }
 
@@ -21,10 +24,7 @@
 }
 
 .footer-desc, .footer-contact span {
-    font-size: 1.3rem;
-    line-height: 1.4rem;
-    color: #333333;
-    font-weight: 400;
+    @include font-props(1.3rem, 400, #333333, 1.4rem);
     font-family: "Roboto Condensed", sans-serif;
     text-transform: uppercase;
 }
@@ -39,10 +39,8 @@
 
 .footer-copyright {
     display: flex;
+    @include font-props(1.2rem, 400, #191919, 1.4rem);
     margin-top: 7.5rem;
-    font-size: 1.2rem;
-    color: #191919;
-    font-weight: 400;
     font-family: "Roboto Condensed", sans-serif;
 }
 

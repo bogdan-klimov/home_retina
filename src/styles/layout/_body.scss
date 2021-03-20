@@ -1,9 +1,5 @@
-/* 
-
-    1. Вынести все цвета, шрифты в переменные
-    2. Создать миксины
-
-**/
+@import '../utils/variables';
+@import '../utils/mixins';
 
 .product {
     overflow: hidden;
@@ -14,73 +10,52 @@
             &-project {
                 position: relative;
                 background-color: #ebb240;
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 3;
                 background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
             }
-        }
-        &-item:nth-child(1), &-item:nth-child(2){
-            grid-row-start: 1;
-            grid-row-end: 3;
-            background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
-        }
-        &-item:nth-child(4) {
-            grid-row-start: 2;
-            grid-row-end: 4;
-        }
-        &-item:nth-child(5), &-item:nth-child(6) {
-            grid-row-start: 3;
-            grid-row-end: 5;
-        }
-        &-item:nth-child(1) {
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-        &-item:nth-child(2) {
-            grid-column-start: 3;
-            grid-column-end: 5;
-        }
-        &-item:nth-child(3) {
-            grid-column-start: 5;
-            grid-column-end: 8;
-        }
-        &-item:nth-child(4) {
-            grid-column-start: 5;
-            grid-column-end: 7;
-        }
-        &-item:nth-child(6) {
-            grid-column-start: 2;
-            grid-column-end: 5;
-        }
-        &-item:nth-child(7) {
-            grid-column-start: 5;
-            grid-column-end: 7;
         }
     }
 }
 
 .def-h2 {
     text-transform: uppercase;
-    font-size: 2.4rem;
-    line-height: 1.4rem;
-    color: #333333;
-    font-weight: 300;
-    font-family: "Roboto Condensed", sans-serif;
+    @include font-props($larger-fs, 300, $main-color, 1.4rem);
+    font-family: $main-family;
 }
 
 .def-list {
     li {
         span {
-            font-size: 1.4rem;
+            font-size: $main-fs;
             line-height: 1.4rem;
-            color: #333333;
+            color: $main-color;
             font-weight: 300;
             text-transform: uppercase;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: $main-family;
+            @include font-props($main-fs, 300, $main-color, 1.4rem);
         }
     }
 }
 
 
+
+.projects-item:hover .icon-right-product {
+    opacity: 1;
+}
+
+.projects-item-time:hover .icon-right-time {
+    opacity: 1;
+}
+
+
 .lamp-block {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
     .view-block {
         margin-top: 7.5rem;
     }
@@ -96,7 +71,9 @@
         display: block;
         max-height: 50rem;
     }
-    background-color: #fff;
+    // background-image: url(../img/fondue-bg.png);
+    // background-size: cover;
+    // background-position-x: center;
     padding: 8.5rem 0 0 5rem;
 }
 
@@ -110,17 +87,14 @@
     display: flex;
     .icon-right {
         color: #ebb240;
-        font-size: 2.5rem;
+        font-size: $largest-fs;
     }
     .icon-right-desc {
         font-size: 1.6rem;
     }
     &-text {
-        font-size: 1.8rem;
-        line-height: 1.4rem;
-        color: #333333;
-        font-weight: 300;
-        font-family: "Roboto Condensed", sans-serif;
+    @include font-props(1.8rem, 300, $main-color, 1.4rem);
+        font-family: $main-family;
         text-transform: uppercase;
         margin: .7rem 0 0 1rem;
     }
@@ -130,20 +104,19 @@
     width: 3rem;
     cursor: pointer;
     .icon-heart-empty {
-        font-size: 2.5rem;
+        font-size: $largest-fs;
     }
     span {
         display: block;
+        @include font-props(1.1rem, 300, #ff0000, 1.2rem);
         margin-left: .3rem;
-        font-size: 1.1rem;
-        line-height: 1.2rem;
-        color: #ff0000;
-        font-weight: 300;
-        font-family: "Roboto Condensed", sans-serif;
+        font-family: $main-family;
     }
 }
 
 .potter-block {
+    grid-column-start: 5;
+    grid-column-end: 7;
     display: flex;
     justify-content: space-between;
     padding: 3.5rem 6rem 0 5rem;
@@ -173,12 +146,9 @@
         }
     }
     &-text {
+        @include font-props(1.3rem, 400, #ffffff, 1.4rem);
         text-transform: uppercase;
-        font-size: 1.3rem;
-        line-height: 1.4rem;
-        color: #fff;
-        font-weight: 400;
-        font-family: "Roboto Condensed", sans-serif;
+        font-family: $main-family;
         margin-left: 1rem;
         display: block;
     }
@@ -203,11 +173,8 @@
 .potter-description-text, .potter-description-head {
     display: block;
     max-width: 15rem;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-    color: #333333;
-    font-weight: 300;
-    font-family: "Roboto Condensed", sans-serif;
+    @include font-props($main-fs, 300, $main-color, 1.4rem);
+    font-family: $main-family;
 }
 
 .potter-description-head {
@@ -217,6 +184,10 @@
 .tabano-block {
     padding: 3.5rem 5.5rem 3.5rem;
     background-color: #e9eae2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 7;
 }
 
 .tabano-img {
@@ -243,6 +214,9 @@
 }
 
 .louis-block {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    height: 100%;
     padding: 3.3rem 0 0 4rem;
     background-image: url(../img/louis-background.png);
     background-position: center;
@@ -252,25 +226,26 @@
             color: #fff;
         }
         &-text {
+            @include font-props($main-fs, 300, #fefefe, 1.4rem);
             max-width: 25.2rem;
-            font-size: 1.4rem;
-            line-height: 1.4rem;
-            color: #333333;
+            font-size: $main-fs;
+            line-height: $main-fs;
+            color: $main-color;
             font-weight: 300;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: $main-family;
             text-transform: uppercase;
             color: #fefefe;
             margin-top: 1.5rem;
         }
     }
     .view-block {
-        margin-top: 2.5rem;
+        margin-top: $largest-fs;
         &-text {
             color: #ffffff;
         }
     }
     .like-block {
-        margin: 2.5rem 0 0 5rem;
+        margin: $largest-fs 0 0 5rem;
         .icon-heart-empty {
             color: #fff;
         }
@@ -282,9 +257,14 @@
 }
 
 .p22-block {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    height: 100%;
     display: flex;
     padding: 6.5rem 6.6rem 0 9.5rem;
     position: relative;
+    grid-row-start: 3;
+    grid-row-end: 5;
     background-color: #eaeaea;
     &-desc {
         position: absolute;
@@ -310,6 +290,8 @@
 }
 
 .fiji-block {
+    grid-column-start: 5;
+    grid-column-end: 7;
     display: flex;
     justify-content: space-between;
     padding: 3.5rem 10.5rem 0 3rem;
@@ -332,24 +314,21 @@
 }
 
 .project-time-line {
-    display: grid;
-    grid-template-columns: 49fr 20fr 31fr;
+    display: block;
+    .container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 49fr 20fr 31fr;
+    }
 }
 
 .sensann-block {
     padding: 2.5rem 10.5rem;
-    // grid-column-start: 1;
-    // grid-column-end: 4;
     background-color: #fff;
     &-desc {
         margin-top: 3rem;
         .def-h2 {
-            font-size: 2.4rem;
-            line-height: 2.4rem;
-            text-transform: uppercase;
-            color: #333333;
-            font-weight: 300;
-            font-family: "Roboto Condensed", sans-serif;
+            color: $main-color;
         }
         &-list {
             margin-top: 1rem;
@@ -365,9 +344,7 @@
 
 .alessi-block {
     padding: 9rem 0 0 13rem;
-    // grid-column-start: 4;
     display: flex;
-    // grid-column-end: 5;
     position: relative;
     overflow: hidden;
     background-color: #cecece;
@@ -402,20 +379,15 @@
 .time-line-block {
     background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
     overflow: hidden;
-    // grid-column-start: 5;
-    // grid-column-end: 7;
     background-color: #ebb240;
     position: relative;
     &-head {
+        @include font-props($main-fs, 400, $main-color, 1.4rem);
         margin-left: 2rem;
-        font-size: 1.4rem;
-        line-height: 1.4rem;
         text-transform: uppercase;
         padding-bottom: 1rem;
         text-align: center;
-        color: #333333;
-        font-weight: 400;
-        font-family: "Roboto Condensed", sans-serif;
+        font-family: $main-family;
     }
     .time-line-wrapper {
         position: absolute;
@@ -425,15 +397,12 @@
     .projects {
         position: static;
         &-text-time {
-            font-size: 1.3rem;
-            line-height: 1.4rem;
-            color: #ffffff;
-            font-weight: 400;
-            font-family: "Roboto Condensed", sans-serif;
+            @include font-props(1.3rem, 400, #ffffff, 1.4rem);
+            font-family: $main-family;
             display: block;
             padding-left: 1rem;
         }
-        &-text-time:hover {
+        &-item-time:hover .projects-text-time{
             color: #000;
         }
     }
@@ -448,18 +417,15 @@
         background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
         overflow: hidden;
         background-color: #ff9b6d;
-        height: 50rem;
+        height: 100%;
         position: relative;
         &-head {
+            @include font-props(4.8rem, 400, #fefefe, 1.4rem);
             top: 55%;
             left: 50%;
             text-transform: uppercase;
             position: absolute;
-            font-size: 4.8rem;
-            line-height: 1.4rem;
-            color: #fefefe;
-            font-weight: 400;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: $main-family;
         }
     }
     &-text {
@@ -469,13 +435,10 @@
         justify-content: space-between;
         &-desc {
             &-para {
+                @include font-props(1.8rem, 300, $main-color, 1.6rem);
                 margin-top: 2.5rem;
                 max-width: 34rem;
-                font-size: 1.8rem;
-                line-height: 1.6rem;
-                color: #333333;
-                font-weight: 300;
-                font-family: "Roboto Condensed", sans-serif;
+                font-family: $main-family;
             }
             &-para:nth-child(3) {
                 margin-top: 4rem;
@@ -491,12 +454,9 @@
 .awards {
     margin: 3rem 0 0 .5rem;
     &-head {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
-        color: #333333;
-        font-weight: 700;
+        @include font-props($main-fs, 700, $main-color, 1.8rem);
         text-transform: uppercase;
-        font-family: "Roboto Condensed", sans-serif;
+        font-family: $main-family;
     }
     &-line {
         width: 100%;
@@ -510,46 +470,39 @@
         &-list {
             margin-top: 2rem;
             &-item {
-                font-size: 1.2rem;
-                line-height: 1.4rem;
-                color: #333333;
-                font-weight: 400;
-                font-family: "Roboto Condensed", sans-serif;
-                text-transform: uppercase;            }
+                @include font-props(1.2rem, 400, $main-color, 1.4rem);
+                font-family: $main-family;
+                text-transform: uppercase;      
+            }       
         }
     }
 }
 
 .studio-designer {
     background-color: #e9eae2;
+    padding: 10rem 0 0 0;
     .container {
         display: grid;
         grid-template-columns: 31fr 69fr;
     }
     &-desc {
         height: 40rem;
-        padding: 10rem 0 0 15rem; 
+        padding: 0 0 0 15rem; 
         max-width: 27rem;
         grid-column-start: 1fr;
         grid-column-end: 2fr;;
         &-head {
-            font-size: 1.4rem;
-            line-height: 1.4rem;
-            color: #333333;
-            font-weight: 400;
-            font-family: "Roboto Condensed", sans-serif;
+            @include font-props($main-fs, 400, $main-color, 1.4rem);
+            font-family: $main-family;
         }
         &-text {
-            font-size: 1.4rem;
-            line-height: 1.4rem;
-            color: #5f5f5d;
-            font-weight: 400;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: $main-family;
             margin-top: 2rem; 
+            @include font-props($main-fs, 400, #5f5f5d, 1.4rem);
         }
     }
     &-list {
-        padding: 11.5rem 12rem 0 0;
+        padding: 0 12rem 0 0;
         grid-column-start: 2;
         grid-column-end: 4;;
         display: flex;
@@ -571,23 +524,17 @@
 }
 
 .designer-name {
+    @include font-props(1.3rem, 700, $main-color, 1.6rem);
     text-transform: uppercase;
     margin-top: 1rem;
     display: block;
-    font-size: 1.3rem;
-    line-height: 1.6rem;
-    color: #333333;
-    font-weight: 700;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: $main-family;
 }
 
 .designer-desc {
+    @include font-props(1.2rem, 400, $main-color, 1.6rem);
     text-transform: uppercase;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    color: #333333;
-    font-weight: 400;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: $main-family;
 }
 
 .designer-social {
@@ -606,11 +553,8 @@
     display: flex;
     align-items: center;
     &-text {
-        font-size: 1.4rem;
-        line-height: 1.6rem;
-        color: #fd5000;
-        font-weight: 400;
-        font-family: "Roboto Condensed";
+        @include font-props($main-fs, 400, #fd5000, 1.6rem);
+        font-family: $main-family;
     }
     .icon-left {
         color: #fd5000;
@@ -626,18 +570,15 @@
         background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
         grid-column-end: 2;
         position: relative;
-        height: 50rem;
+        height: 100%;
         background-color: #d4edbf;
         &-head {
+            @include font-props(4.8rem, 400, #ffffff, 1.4rem);
             position: absolute;
-            font-size: 4.8rem;
-            line-height: 1.4rem;
-            top: 29.5rem;
-            left: 23.5rem;
+            top: 55%;
+            left: 50%;
             text-transform: uppercase;
-            color: #ffffff;
-            font-weight: 400;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: $main-family;
         }
     }
 }
@@ -653,40 +594,28 @@
         &-item {
             max-width: 38rem;
             &-head {
-                font-size: 2.4rem;
-                line-height: 2.4rem;
-                color: #333333;
+                @include font-props($larger-fs, 700, $main-color, 2.5rem);
                 text-transform: uppercase;
-                font-weight: 700;
-                font-family: "Roboto Condensed", sans-serif;
+                font-family: $main-family;
                 height: 4.5rem;
             }
             &-data {
-                font-size: 1.2rem;
-                line-height: 2.4rem;
-                color: #6a6969;
-                font-weight: 400;
-                font-family: "Roboto Condensed", sans-serif;
+                @include font-props(1.2rem, 400, #6a6969, 2.5rem);
+                font-family: $main-family;
                 text-transform: uppercase;
             }
             &-img {
                 max-width: 38rem;
             }
             &-text {
-                font-size: 1.2rem;
-                line-height: 1.4rem;
-                color: #6a6969;
-                font-weight: 400;
-                font-family: "Roboto Condensed", sans-serif;
+                @include font-props(1.2rem, 400, #6a6969, 1.4rem);;
+                font-family: $main-family;
                 margin-top: 2rem;
                 height: 5rem;
             }
             &-read-more {
-                font-size: 1.2rem;
-                line-height: 1.4rem;
-                color: #fd5000;
-                font-weight: 400;
-                font-family: "Roboto Condensed", sans-serif;
+                @include font-props(1.2rem, 400, #fd5000, 1.4rem);
+                font-family: $main-family;
                 text-transform: uppercase;
                 display: block;
                 float: right;
