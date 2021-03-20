@@ -5,7 +5,7 @@
     overflow: hidden;
     &-block {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 31fr 31fr 38fr 38fr 31fr 31fr;
         &-item {
             &-project {
                 position: relative;
@@ -216,7 +216,6 @@
 .louis-block {
     grid-row-start: 3;
     grid-row-end: 5;
-    height: 100%;
     padding: 3.3rem 0 0 4rem;
     background-image: url(../img/louis-background.png);
     background-position: center;
