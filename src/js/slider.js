@@ -2,11 +2,11 @@ const slider = document.getElementById("slider");
 const sliderBtnLeft = document.getElementById("slider-button-left");
 const sliderBtnRight = document.getElementById("slider-button-right");
 const visibleWindow = document.getElementById("visible-window");
-const move = 158;
-let step = 0;
 
+const move = 158;
 const leftBorder = 0;
 const rightBorder = -316;
+let step = 0;
 
 sliderBtnRight.addEventListener('click', () => {
     step += -move

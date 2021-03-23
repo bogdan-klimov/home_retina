@@ -1,15 +1,9 @@
-const blockHeight = document.getElementsByClassName('block-height');
-const currWidth = window.innerWidth;
-const sectionHeight = currWidth / 3;
+const globalSectionList = document.getElementsByClassName('block-height');
+const productBlock = document.querySelector(".product-block-button-part");
+const currWindowWidth = window?.innerWidth; // window && window.innerWidth
 
-Array.from(blockHeight).forEach(block => {
-    block.style.height = `${sectionHeight}px`;
-})
+const globalSectionHeight = currWindowWidth / 3;
+const productBlockHeight = currWindowWidth / 3.25;
 
-const blockHeightProject = document.getElementsByClassName("product-block-button-part")[0];
-const sectionHeightProject = currWidth / 3.25;
-blockHeightProject.style.height = `${sectionHeightProject}px`;
-
-
-
-
+Array.from(globalSectionList).forEach(section => section.style.height = `${globalSectionHeight}px`);
+productBlock.style.height = `${productBlockHeight}px`;

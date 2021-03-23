@@ -65,7 +65,7 @@
             line-height: 14px;
             color: #0b0b0b;
             font-weight: 300;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: $main-family;
             max-width: 544px;
             &-first-para {
                 margin-top: 3rem;
@@ -76,7 +76,7 @@
         }
     }
     &-img {
-        max-width: 375px;
+        max-width: 375px; // !
         margin: 10rem 10rem 0 0;
     }
 }
@@ -90,8 +90,10 @@
     margin-left: auto;
     .line-single-project, .line-single-project::before, .line-single-project::after {
         position: absolute;
-        top: 50%; margin-left: -1.25rem;
-        left: 50%;  margin-top: -0.15rem;
+        top: 50%; 
+        margin-left: -1.25rem;
+        left: 50%;  
+        margin-top: -0.15rem;
         display: block;
         width: 2.5rem;
         height: .2rem;
@@ -102,7 +104,7 @@
     }
     .line-single-project::before {
         transform: translateY(-0.6rem);
-        transform: rotate(45deg);
+        transform: rotate(45deg); // вынести в миксин
     }
     
     .line-single-project::after {
@@ -114,13 +116,7 @@
     }
 }
 
-
-
-
-
-
-
-
+//--/--/--/ PRODUCTS SECTION --/--/--/--/
 
 .product {
     overflow: hidden;
@@ -499,9 +495,6 @@
     display: block;
     position: absolute;
 }
-
-
-
 
 .time-line-block {
     background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
