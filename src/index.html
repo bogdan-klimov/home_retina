@@ -52,12 +52,8 @@
                     <li><a href="#">news</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
-                <div class="nav-btn-wrapper" id="nav-btn">
-                    <div class="nav-btn">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
+                <div class="nav-btn" id="nav-btn">
+                    <span class="line"></span>
                 </div>
                 <p class="nav-block-desc">
                     90802 California
@@ -75,221 +71,364 @@
     </header>
     <section class="product">
         <div class="container">
-            <ul class="product-block">
-                <li class="product-block-item product-block-item-project">
-                    <ul class="projects">
-                        <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">All</a></li>
-                        <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">House</a></li>
-                        <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">Commercial</a></li>
-                        <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">Personal</a></li>
-                        <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">Studio Lab</a></li>
-                    </ul>
-                    <h2 class="projects-head def-h2">
-                        projects
-                    </h2>
-                </li>
-                <li class="product-block-item lamp-block">
-                    <div class="lamp-desc">
-                        <h2 class="def-h2">
-                            FONDUE
-                        </h2>
-                        <ul class="lamp-desc-text def-list">
-                            <li><span class="lamp-desc-text-item"><strong>Project Assistant:</strong> Francesco Dompieri</span></li>
-                            <li><span class="lamp-desc-text-item"><strong>Material:</strong> Glass and Metal</span></li>
-                            <li><span class="lamp-desc-text-item"><strong>Typology:</strong> Suspension lamp</span></li>
-                            <li><span class="lamp-desc-text-item"><strong>Client:</strong> David Design</span></li>
-                            <li><span class="lamp-desc-text-item"><strong>Year:</strong> 2014</span></li>
-                        </ul>
-                        <a href="#" class="view-block">
-                            <div class="icon-right"></div>
-                            <span class="view-block-text">View project</span>
-                        </a>
-                        <div class="like-block">
-                            <div class="icon-heart-empty"></div>
-                            <span>+200</span>
-                        </div>
+            <div class="single-project-wrapper single-project-lamp-block" id="single-project-wrapper">
+                <div class="single-project-block">
+                    <div class="close-icon" id="close-icon-fondue">
+                        <span class="line-single-project"></span>
                     </div>
-                    <img src="img/lamp.png" alt="lamp" class="lamp-img">
-                </li>
-                <li class="product-block-item potter-block">
-                    <div class="potter-block-wrapper">
-                        <h2 class="def-h2">
-                            potter
-                        </h2>
-                        <div class="potter-block-description">
-                            <span class="potter-description-head"><strong>for stelton</strong></span>
-                            <span class="potter-description-text">
-                                Potter focuses on 
-                                the functionality and process 
-                                of preparing tea. a big sieve 
-                                allows the flavor of to evenly 
-                                brewed. 
-                            </span>
-                        </div>
-                        <a href="#" class="view-block">
-                            <div class="icon-right"></div>
-                            <span class="view-block-text">View project</span>
-                        </a>
-                        <div class="like-block">
-                            <div class="icon-heart-empty"></div>
-                            <span>+200</span>
-                        </div>
-                    </div>
-                    <img src="img/potter.png" alt="potter" class="potter-img">
-                </li>
-                <li class="product-block-item tabano-block">
-                    <img src="img/tabano.png" alt="tabano" class="tabano-img">
-                    <div class="tabano-description">
-                        <div class="tabano-description-text">
-                            <h2 class="def-h2">tabano</h2>
-                            <ul class="tabano-description-text-block def-list">
-                                <li class="tabano-description-text-block-item">
-                                    <span><strong>DESIGNER:</strong> PATRICIA URQUIOLA</span>
+                    <div class="single-project-content">                  
+                        <div class="single-project-block-desc">
+                            <h2 class="single-project-bock-desc-h2 def-h2">
+                                fondue
+                            </h2>
+                            <ul class="single-project-block-desc-list def-list">
+                                <li class="single-project-block-desc-list-item">
+                                    <span>
+                                        <strong>Project Assistant:</strong> Francesco Dompieri
+                                    </span>
                                 </li>
-                                <li class="tabano-description-text-block-item">
-                                    <span><strong>Typology</strong>: Armchairs</span>
+                                <li class="single-project-block-desc-list-item">
+                                    <span>
+                                        <strong>Material:</strong> Glass and Metal
+                                    </span>
                                 </li>
-                                <li class="tabano-description-text-block-item">
-                                    <span><strong>Client:</strong> B&B ITALIA</span>
+                                <li class="single-project-block-desc-list-item">
+                                    <span>
+                                        <strong>Typology:</strong> Suspension lamp
+                                    </span>
                                 </li>
-                                <li class="tabano-description-text-block-item">
-                                    <span><strong>Year:</strong> 2014</span>
+                                <li class="single-project-block-desc-list-item">
+                                    <span>
+                                        <strong>Client:</strong>David Design
+                                    </span>
                                 </li>
                             </ul>
+                            <p class="single-project-block-desc-text single-project-block-desc-text-first-para">
+                                Merging different traditions – the South European 
+                                and the North European – in the field of household 
+                                suspended lights is the starting point of Fondue, 
+                                a lamp designed by Luca Nichetto for the Swedish 
+                                David Design. The inspiration comes from the 
+                                observation of pot bellied traditional fondue 
+                                cauldrons, which were kept suspended above a heat 
+                                source for the cheese to slowly melt. Similarly, 
+                                the pot bellied glass diffuser is suspended, 
+                                supported by a slender metal frame enclosing the 
+                                light source.
+                            </p>
+                            <p class="single-project-block-desc-text single-project-block-desc-text-second-para">
+                                One of Fondue’s peculiarities is the solution 
+                                designed for the output of the power cable, which 
+                                is generally concealed or made less evident. 
+                                Instead, here it becomes a feature of the lamp, 
+                                located in its lower part, which allows the power 
+                                source to be released from the fixing point in the 
+                                ceiling. This makes Fondue easily adaptable to 
+                                various architectural situations.
+                            </p>
+                            <div class="single-project-block-slider">
+                                <div class="icon-left-open-big" id="slider-button-left"></div>
+                                <div class="single-project-block-slider-visible-window" id="visible-window">
+                                    <ul class="single-project-block-slider-list" id="slider">
+                                        <li class="single-project-block-slider-list-item">
+                                            <img src="img/lamp-slider1.png" alt="lamp-slider1" class="single-project-block-slider-list-item-img">
+                                        </li>
+                                        <li class="single-project-block-slider-list-item">
+                                            <img src="img/lamp-slider2.png" alt="lamp-slider2" class="single-project-block-slider-list-item-img">
+                                        </li>
+                                        <li class="single-project-block-slider-list-item">
+                                            <img src="img/lamp-slider3.png" alt="lamp-slider3" class="single-project-block-slider-list-item-img">
+                                        </li>
+                                        <li class="single-project-block-slider-list-item">
+                                            <img src="img/lamp-slider4.png" alt="lamp-slider4" class="single-project-block-slider-list-item-img">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="icon-right-open-big" id="slider-button-right"></div>
+                            </div>
+                            <ul class="social">
+                                <li><a href="#" class="icon-facebook icon"></a></li>
+                                <li><a href="#" class="icon-twitter icon"></a></li>
+                                <li><a href="#" class="icon-linkedin icon"></a></li>
+                                <li><a href="#" class="icon-gplus icon"></a></li>
+                            </ul>
                         </div>
-                        <div class="tabano-description-social">
+                        <img src="img/lamp.png" alt="" class="single-project-block-img">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="product-block-wrapper">
+                <div class="product-block-main-part">
+                    <ul class="product-block-top-part">
+                        <li class="product-block-item product-block-item-project block-height">
+                            <ul class="projects">
+                                <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">All</a></li>
+                                <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">House</a></li>
+                                <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">Commercial</a></li>
+                                <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">Personal</a></li>
+                                <li class="projects-item"><div class="icon-right icon-right-product"></div><a href="#" class="projects-text">Studio Lab</a></li>
+                            </ul>
+                            <h2 class="projects-head def-h2">
+                                projects
+                            </h2>
+                        </li>
+                        <li class="product-block-item lamp-block">
+                            <div class="lamp-desc">
+                                <h2 class="def-h2">
+                                    FONDUE
+                                </h2>
+                                <ul class="lamp-desc-text def-list">
+                                    <li><span class="lamp-desc-text-item"><strong>Project Assistant:</strong> Francesco Dompieri</span></li>
+                                    <li><span class="lamp-desc-text-item"><strong>Material:</strong> Glass and Metal</span></li>
+                                    <li><span class="lamp-desc-text-item"><strong>Typology:</strong> Suspension lamp</span></li>
+                                    <li><span class="lamp-desc-text-item"><strong>Client:</strong> David Design</span></li>
+                                    <li><span class="lamp-desc-text-item"><strong>Year:</strong> 2014</span></li>
+                                </ul>
+                                <a href="#" class="view-block" id="single-fondue-btn">
+                                    <div class="icon-right"></div>
+                                    <span class="view-block-text">View project</span>
+                                </a>
+                                <div class="like-block">
+                                    <div class="icon-hearts">
+                                        <label for="checkbox-icon-heart-empty-fondue" class="heart-label">
+                                            <span class="icon-heart-empty"></span>
+                                                <input type="checkbox" id="checkbox-icon-heart-empty-fondue">
+                                            <span class="icon-heart icon-heart-fondue"></span>
+                                        </label>
+                                    </div>
+                                    <span class="quantity-likes">+200</span>
+                                </div>
+                            </div>
+                            <img src="img/lamp.png" alt="lamp" class="lamp-img block-height">
+                        </li>
+                    </ul>
+                    <ul class="product-block-button-part">
+                        <li class="product-block-item louis-block">
+                            <div class="louis-block-desc">
+                                <h2 class="def-h2">
+                                    louis xx
+                                </h2>
+                                <ul class="louis-block-desc-text">
+                                    <li class="louis-block-desc-text-item"><span><strong>designer: </strong>philippe starck </span></li>
+                                    <li class="louis-block-desc-text-item"><span><strong>ypology: </strong>chairs</span></li>
+                                    <li class="louis-block-desc-text-item"><span><strong>Client:</strong>vitra</span> </li>
+                                    <li class="louis-block-desc-text-item"><span><strong>Year:</strong>2012</span></li>
+                                </ul>
+                            </div>
                             <a href="#" class="view-block">
                                 <div class="icon-right"></div>
                                 <span class="view-block-text">View project</span>
                             </a>
                             <div class="like-block">
-                                <div class="icon-heart-empty"></div>
-                                <span>+200</span>
+                                <div class="icon-hearts">
+                                    <label for="checkbox-icon-heart-empty" class="heart-label">
+                                        <span class="icon-heart-empty"></span>
+                                        <input type="checkbox" id="checkbox-icon-heart-empty">
+                                        <span class="icon-heart"></span>
+                                    </label>
+                                </div>
+                                <span class="quantity-likes">+200</span>
+                            </div>
+                        </li>
+                        <li class="product-block-item p22-block">
+                            <img src="img/p22.png" alt="p22" class="p22-img">
+                            <div class="p22-block-desc">
+                                <h2 class="def-h2">395-396 P22</h2>
+                                <ul class="p22-block-desc-text def-list">
+                                    <li class="louis-block-desc-text-item"><span><strong>designer:</strong> Patrick Norguet</span></li>
+                                    <li class="louis-block-desc-text-item"><span><strong>ypology:</strong> ARMchairs</span></li>
+                                    <li class="louis-block-desc-text-item"><span><strong>Client:</strong> Cassina</span></li>
+                                    <li class="louis-block-desc-text-item"><span><strong>Year:</strong> 2013</span></li>
+                                </ul>
+                            </div>
+                            <div class="p22-block-social">
+                                <a href="#" class="view-block">
+                                    <div class="icon-right"></div>
+                                    <span class="view-block-text">View project</span>
+                                </a>
+                                <div class="like-block">
+                                    <div class="icon-hearts">
+                                        <label for="checkbox-icon-heart-empty-p22" class="heart-label">
+                                            <span class="icon-heart-empty"></span>
+                                                <input type="checkbox" id="checkbox-icon-heart-empty-p22">
+                                            <span class="icon-heart icon-heart-p22"></span>
+                                        </label>
+                                    </div>
+                                    <span class="quantity-likes">+200</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="product-block-aside-part">
+                    <li class="product-block-item potter-block">
+                        <div class="potter-block-wrapper">
+                            <h2 class="def-h2">
+                                potter
+                            </h2>
+                            <div class="potter-block-description">
+                                <span class="potter-description-head"><strong>for stelton</strong></span>
+                                <span class="potter-description-text">
+                                    Potter focuses on 
+                                    the functionality and process 
+                                    of preparing tea. a big sieve 
+                                    allows the flavor of to evenly 
+                                    brewed. 
+                                </span>
+                            </div>
+                            <a href="#" class="view-block">
+                                <div class="icon-right"></div>
+                                <span class="view-block-text">View project</span>
+                            </a>
+                            <div class="like-block">
+                                <div class="icon-hearts">
+                                    <label for="checkbox-icon-heart-empty-potter" class="heart-label">
+                                        <span class="icon-heart-empty"></span>
+                                            <input type="checkbox" id="checkbox-icon-heart-empty-potter">
+                                        <span class="icon-heart icon-heart-potter"></span>
+                                    </label>
+                                </div>
+                                <span class="quantity-likes">+200</span>
+                            </div>
+                        </div>
+                        <img src="img/potter.png" alt="potter" class="potter-img">
+                    </li>
+                    <li class="product-block-item tabano-block">
+                        <img src="img/tabano.png" alt="tabano" class="tabano-img">
+                        <div class="tabano-description">
+                            <div class="tabano-description-text">
+                                <h2 class="def-h2">tabano</h2>
+                                <ul class="tabano-description-text-block def-list">
+                                    <li class="tabano-description-text-block-item">
+                                        <span><strong>DESIGNER:</strong> PATRICIA URQUIOLA</span>
+                                    </li>
+                                    <li class="tabano-description-text-block-item">
+                                        <span><strong>Typology</strong>: Armchairs</span>
+                                    </li>
+                                    <li class="tabano-description-text-block-item">
+                                        <span><strong>Client:</strong> B&B ITALIA</span>
+                                    </li>
+                                    <li class="tabano-description-text-block-item">
+                                        <span><strong>Year:</strong> 2014</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tabano-description-social">
+                                <a href="#" class="view-block">
+                                    <div class="icon-right"></div>
+                                    <span class="view-block-text">View project</span>
+                                </a>
+                                <div class="like-block">
+                                    <div class="icon-hearts">
+                                        <label for="checkbox-icon-heart-empty-tabano" class="heart-label">
+                                            <span class="icon-heart-empty"></span>
+                                                <input type="checkbox" id="checkbox-icon-heart-empty-tabano">
+                                            <span class="icon-heart icon-heart-tabano"></span>
+                                        </label>
+                                    </div>
+                                    <span class="quantity-likes">+200</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-block-item fiji-block">
+                        <img src="img/fiji.png" alt="" class="fiji-block-img">
+                        <div class="fiji-block-desc">
+                            <h2 class="def-h2">FIJI</h2>
+                            <ul class="fiji-block-desc-list def-list">
+                                <li class="fiji-block-desc-list-item"><span><strong>designer:</strong> Cuno Frommherz</span></li>
+                                <li class="fiji-block-desc-list-item"><span><strong>Typology:</strong> armchairs</span></li>
+                                <li class="fiji-block-desc-list-item"><span><strong>Year:</strong> 2012</span></li>
+                            </ul>
+                            <a href="#" class="view-block">
+                                <div class="icon-right"></div>
+                                <span class="view-block-text">View project</span>
+                            </a>
+                            <div class="like-block">
+                                <div class="icon-hearts">
+                                    <label for="checkbox-icon-heart-empty-fiji" class="heart-label">
+                                        <span class="icon-heart-empty"></span>
+                                            <input type="checkbox" id="checkbox-icon-heart-empty-fiji">
+                                        <span class="icon-heart icon-heart-fiji"></span>
+                                    </label>
+                                </div>
+                                <span class="quantity-likes">+200</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="time-line-block">
+                <div class="container">
+                    <div class="sensann-block">
+                        <img src="img/sensann.png" alt="sensann" class="sensann-img">
+                        <div class="sensann-wrapper">
+                            <div class="sensann-block-desc">
+                                <h2 class="def-h2">
+                                    Sesann
+                                </h2>
+                                <ul class="sensann-block-desc-list def-list">
+                                    <li class="sensann-block-desc-list-item"><span><strong>designer:</strong> Gianfranco Frattini</span></li>
+                                    <li class="sensann-block-desc-list-item"><span><strong>Typology:</strong> armchairs</span></li>
+                                    <li class="sensann-block-desc-list-item"><span><strong>Client:</strong> cassina</span></li>
+                                    <li class="sensann-block-desc-list-item"><span><strong>Year:</strong> 1970</span></li>
+                                </ul>
+                            </div>
+                            <a href="#" class="view-block">
+                                <div class="icon-right"></div>
+                                <span class="view-block-text">View project</span>
+                            </a>
+                            <div class="like-block">
+                                <div class="icon-hearts">
+                                    <label for="checkbox-icon-heart-empty-sensann" class="heart-label">
+                                        <span class="icon-heart-empty"></span>
+                                            <input type="checkbox" id="checkbox-icon-heart-empty-sensann">
+                                        <span class="icon-heart icon-heart-sensann"></span>
+                                    </label>
+                                </div>
+                                <span class="quantity-likes">+200</span>
                             </div>
                         </div>
                     </div>
-
-                </li>
-                <li class="product-block-item louis-block">
-                    <div class="louis-block-desc">
-                        <h2 class="def-h2">
-                            louis xx
-                        </h2>
-                        <ul class="louis-block-desc-text">
-                            <li class="louis-block-desc-text-item"><span><strong>designer: </strong>philippe starck </span></li>
-                            <li class="louis-block-desc-text-item"><span><strong>ypology: </strong>chairs</span></li>
-                            <li class="louis-block-desc-text-item"><span><strong>Client:</strong>vitra</span> </li>
-                            <li class="louis-block-desc-text-item"><span><strong>Year:</strong>2012</span></li>
-                        </ul>
-                    </div>
-                    <a href="#" class="view-block">
-                        <div class="icon-right"></div>
-                        <span class="view-block-text">View project</span>
-                    </a>
-                    <div class="like-block">
-                        <div class="icon-heart-empty"></div>
-                        <span>+200</span>
-                    </div>
-                </li>
-                <li class="product-block-item p22-block">
-                    <img src="img/p22.png" alt="p22" class="p22-img">
-                    <div class="p22-block-desc">
-                        <h2 class="def-h2">395-396 P22</h2>
-                        <ul class="p22-block-desc-text def-list">
-                            <li class="louis-block-desc-text-item"><span><strong>designer:</strong> Patrick Norguet</span></li>
-                            <li class="louis-block-desc-text-item"><span><strong>ypology:</strong> ARMchairs</span></li>
-                            <li class="louis-block-desc-text-item"><span><strong>Client:</strong> Cassina</span></li>
-                            <li class="louis-block-desc-text-item"><span><strong>Year:</strong> 2013</span></li>
-                        </ul>
-                    </div>
-                    <div class="p22-block-social">
-                        <a href="#" class="view-block">
-                            <div class="icon-right"></div>
-                            <span class="view-block-text">View project</span>
-                        </a>
-                        <div class="like-block">
-                            <div class="icon-heart-empty"></div>
-                            <span class="view-block-text">+200</span>
+                    <div class="alessi-block">
+                        <img src="img/alessi.png" alt="alessi" class="alessi-img">
+                        <div class="alessi-desc">
+                            <h2 class="def-h2">Alessi</h2>
+                            <ul class="alessi-desc-list def-list">
+                                <li class="sensann-block-desc-list-item"><span><strong>designer:</strong>Piero Lissoni</span></li>
+                                <li class="sensann-block-desc-list-item"><span><strong>Client:</strong> Alessi</span></li>
+                                <li class="sensann-block-desc-list-item"><span><strong>Year:</strong> 2013</span></li>
+                            </ul>
+                            <a href="#" class="view-block">
+                                <div class="icon-right"></div>
+                                <span class="view-block-text">View project</span>
+                            </a>
+                            <div class="like-block">
+                                <div class="icon-hearts">
+                                    <label for="checkbox-icon-heart-empty-alessi" class="heart-label">
+                                        <span class="icon-heart-empty"></span>
+                                            <input type="checkbox" id="checkbox-icon-heart-empty-alessi">
+                                        <span class="icon-heart icon-heart-alessi"></span>
+                                    </label>
+                                </div>
+                                <span class="quantity-likes">+200</span>
+                            </div>
                         </div>
                     </div>
-                </li>
-                <li class="product-block-item fiji-block">
-                    <img src="img/fiji.png" alt="" class="fiji-block-img">
-                    <div class="fiji-block-desc">
-                        <h2 class="def-h2">FIJI</h2>
-                        <ul class="fiji-block-desc-list def-list">
-                            <li class="fiji-block-desc-list-item"><span><strong>designer:</strong> Cuno Frommherz</span></li>
-                            <li class="fiji-block-desc-list-item"><span><strong>Typology:</strong> armchairs</span></li>
-                            <li class="fiji-block-desc-list-item"><span><strong>Year:</strong> 2012</span></li>
-                        </ul>
-                        <a href="#" class="view-block">
-                            <div class="icon-right"></div>
-                            <span class="view-block-text">View project</span>
-                        </a>
-                        <div class="like-block">
-                            <div class="icon-heart-empty"></div>
-                            <span>+200</span>
-                        </div> 
+                    <div class="time-line-block">
+                        <div class="time-line-wrapper">
+                            <h2 class="time-line-block-head">timeline</h2>
+                            <ul class="projects">
+                                <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2014</a></li>
+                                <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2013</a></li>
+                                <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2012</a></li>
+                                <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2011</a></li>
+                                <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2010</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="project-time-line">
-        <div class="container  ">
-            <div class="sensann-block">
-                <img src="img/sensann.png" alt="sensann" class="sensann-img">
-                <div class="sensann-wrapper">
-                    <div class="sensann-block-desc">
-                        <h2 class="def-h2">
-                            Sesann
-                        </h2>
-                        <ul class="sensann-block-desc-list def-list">
-                            <li class="sensann-block-desc-list-item"><span><strong>designer:</strong> Gianfranco Frattini</span></li>
-                            <li class="sensann-block-desc-list-item"><span><strong>Typology:</strong> armchairs</span></li>
-                            <li class="sensann-block-desc-list-item"><span><strong>Client:</strong> cassina</span></li>
-                            <li class="sensann-block-desc-list-item"><span><strong>Year:</strong> 1970</span></li>
-                        </ul>
-                    </div>
-                    <a href="#" class="view-block">
-                        <div class="icon-right"></div>
-                        <span class="view-block-text">View project</span>
-                    </a>
-                    <div class="like-block">
-                        <div class="icon-heart-empty"></div>
-                        <span>+200</span>
-                    </div> 
-                </div>
-            </div>
-            <div class="alessi-block">
-                <img src="img/alessi.png" alt="alessi" class="alessi-img">
-                <div class="alessi-desc">
-                    <h2 class="def-h2">Alessi</h2>
-                    <ul class="alessi-desc-list def-list">
-                        <li class="sensann-block-desc-list-item"><span><strong>designer:</strong>Piero Lissoni</span></li>
-                        <li class="sensann-block-desc-list-item"><span><strong>Client:</strong> Alessi</span></li>
-                        <li class="sensann-block-desc-list-item"><span><strong>Year:</strong> 2013</span></li>
-                    </ul>
-                    <a href="#" class="view-block">
-                        <div class="icon-right"></div>
-                        <span class="view-block-text">View project</span>
-                    </a>
-                    <div class="like-block">
-                        <div class="icon-heart-empty"></div>
-                        <span>+200</span>
-                    </div> 
-                </div>
-            </div>
-            <div class="time-line-block">
-                <div class="time-line-wrapper">
-                    <h2 class="time-line-block-head">timeline</h2>
-                    <ul class="projects">
-                        <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2014</a></li>
-                        <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2013</a></li>
-                        <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2012</a></li>
-                        <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2011</a></li>
-                        <li class="projects-item-time projects-item"><div class="icon-right icon-right-time"></div><a href="#" class="projects-text-time">2010</a></li>
-                    </ul>
                 </div>
             </div>
         </div>

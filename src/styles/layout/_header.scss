@@ -73,7 +73,7 @@ html {
     margin-left: 9rem;
 }
 
-.nav-btn-wrapper {
+.nav-btn {
     width: 100%;
     height: 100%;
     max-width: 12rem;
@@ -92,55 +92,59 @@ html {
     height: 100%;
 }
 
-.nav-btn-active {
-    border: none;
-}
-
-.line {
+.line, .line::before, .line::after {
+    display: block;
     position: absolute;
-    top: 4.7rem;
-    left: 4rem;
-    transition: .5s;
+    top: 50%; 
+    margin-top: -0.15rem;
+    left: 50%; 
+    margin-left: -2rem; 
+    transition: .05s;
     width: 4rem;
     height: 0.3rem;
     background-color: #fff;
     z-index: 10;
 }
 
-.center-line-active {
-    opacity: 0 !important;
-}
-
-.line:nth-child(2) {
-    top: 5.5rem;
-    opacity: 1;
-}
-
-.line:nth-child(3) {
-    top: 6.3rem;
-}
-
-.line-top-active {
+.line::before, .line::after {
+    content: "";
+    display: block;
     transition: .5s;
-    top: 6.2rem;
-    transform: rotate(50deg);
-    width: 7rem;
-    left: 2.5rem;
 }
 
-.line-bottom-active {
-    transition: .5s;
-    transform: rotate(-50deg);
-    width: 7rem;
-    left: 2.5rem;
+.line::before {
+    transform: translateY(-0.6rem)
 }
 
+.line::after {
+    transform: translateY(0.6rem)
+}
+
+.nav-btn-active .line::before {
+    transform: rotate(45deg);
+    width: 6rem;
+    margin-left: -3rem;
+} 
+
+.nav-btn-active .line::after {
+    transform: rotate(-45deg);
+    width: 6rem;
+    margin-left: -3rem;
+} 
+
+.nav-btn-active {
+    border: none;
+}
+
+.nav-btn-active .line {
+    height: 0
+} 
 
 .nav-block {
     @include font-props($main-fs, 400, #ffffff, 2.5rem);
     font-family: $main-family;
     text-transform: uppercase;
-    padding: 5.1rem 15rem 5.1rem 5rem;
+    padding: 5.1rem 14.5rem 4.6rem 5rem;
     background-color: #f8c255;
     position: absolute;
     display: none;
@@ -156,8 +160,6 @@ html {
 .nav-block-active {
     display: flex;
 }
-
-
 
 .nav-block-desc {
     @include font-props(1.5rem, 400, #ffffff, 1.4rem);

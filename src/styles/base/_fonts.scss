@@ -10,54 +10,68 @@
     font-style: normal;
   }
    
-   [class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1em;
-    margin-left: .2em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-   
-  .icon-cancel:before { 
-    content: '\e800'; 
-  } 
-  .icon-heart-empty:before { 
-    content: '\e801'; 
-    font-size: 25px;
-  } 
-  .icon-left:before { 
-    content: '\e802'; 
-  } 
-  .icon-right:before { 
-    content: '\e803'; 
-  } 
-  .icon-heart:before {
-    content: '\e804'; 
-    margin-top: 2px;
-    font-size: 25px;
-    padding-bottom: 1px;
-    }
-  .icon-twitter:before { 
-    content: '\f099'; 
-  } 
-  .icon-facebook:before { 
-    content: '\f09a'; 
-  } 
-  .icon-copyright:before { 
-    content: '\f1f9'; 
-  } 
-  .icon-gplus:before { 
-    content: '\f30f'; 
-  } 
-  .icon-linkedin:before { 
-    content: '\f318'; 
-  } 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+font-family: "fontello";
+font-style: normal;
+font-weight: normal;
+display: inline-block;
+text-decoration: inherit;
+width: 1em;
+margin-right: .2em;
+text-align: center;
+font-variant: normal;
+text-transform: none;
+line-height: 1em;
+margin-left: .2em;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cancel:before { 
+  content: '\e800'; 
+} 
+.icon-heart-empty:before { 
+  content: '\e801'; 
+  font-size: 25px;
+} 
+.icon-left:before { 
+  content: '\e802'; 
+} 
+.icon-right:before { 
+  content: '\e803'; 
+} 
+.icon-heart:before {
+  content: '\e804'; 
+  margin-top: 2px;
+  font-size: 25px;
+  padding-bottom: 1px;
+}
+.icon-twitter:before { 
+  content: '\f099'; 
+} 
+.icon-facebook:before { 
+  content: '\f09a'; 
+} 
+.icon-copyright:before { 
+  content: '\f1f9'; 
+} 
+.icon-gplus:before { 
+  content: '\f30f';   
+} 
+.icon-linkedin:before { 
+  content: '\f318'; 
+} 
+.icon-left-open-big:before { 
+  content: '\e805'; 
+} 
+.icon-right-open-big:before {
+  content: '\e806'; 
+} 
+
+.icon-left-open-big::before, 
+.icon-right-open-big::before {
+  font-size: 6rem;
+  color: #7a7a7a;
+  cursor: pointer;
+}
+
