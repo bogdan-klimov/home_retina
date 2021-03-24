@@ -9,7 +9,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #ffffff;
+    background-color: $white-color;
 }
 
 .single-project-wrapper-active {
@@ -54,19 +54,19 @@
         .social {
             margin: 7rem 0 0 25rem;
             .icon {
-                color: #333333;
+                color: $main-color;
             }
         }
         &-list {
             margin-top: 3rem;
         }
         &-text {
-            font-size: 14px;
-            line-height: 14px;
-            color: #0b0b0b;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            color: $light-black-color;
             font-weight: 300;
             font-family: $main-family;
-            max-width: 544px;
+            max-width: 54.4rem;
             &-first-para {
                 margin-top: 3rem;
             }
@@ -76,16 +76,16 @@
         }
     }
     &-img {
-        max-width: 375px; // !
+        max-width: 37.5rem;
         margin: 10rem 10rem 0 0;
     }
 }
 
 .close-icon {
     cursor: pointer;
-    border: 2px solid #131313;
-    width: 100px;
-    height: 100px;
+    border: .2rem solid $lum-black-color;
+    width: 10rem;
+    height: 10rem;
     position: relative;
     margin-left: auto;
     .line-single-project, .line-single-project::before, .line-single-project::after {
@@ -97,19 +97,17 @@
         display: block;
         width: 2.5rem;
         height: .2rem;
-        background-color: #131313;
+        background-color: $lum-black-color;
     }
     .line-single-project::before, .line-single-project::after {
         content: "";
     }
     .line-single-project::before {
-        transform: translateY(-0.6rem);
-        transform: rotate(45deg); // вынести в миксин
+        @include transform-props (-0.6rem, 45deg)
     }
     
     .line-single-project::after {
-        transform: translateY(0.6rem);
-        transform: rotate(-45deg);
+        @include transform-props (0.6rem, -45deg);
     }
     .line-single-project {
         height: 0;
@@ -123,16 +121,13 @@
     position: relative;
     &-block {
         &-wrapper {
-            display: grid;
-            grid-template-columns: 69fr 31fr;
+            @include grid-props(grid, 69fr 31fr);
         }
         &-top-part {
-            display: grid;
-            grid-template-columns: 31fr 38fr;
+            @include grid-props(grid, 31fr 38fr);
         }
         &-button-part {
-            display: grid;
-            grid-template-columns: 20fr 49fr;
+            @include grid-props(grid, 20fr 49fr);
         }
         &-aside-part {
             display: grid;
@@ -141,8 +136,8 @@
         &-item {
             &-project {
                 position: relative;
-                background-color: #ebb240;
-                background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
+                background-color: $yellow-color;
+                background-image: $linear-gradient;
             }
         }
     }
@@ -203,7 +198,7 @@
 .view-block {
     display: flex;
     .icon-right {
-        color: #ebb240;
+        color: $yellow-color;
         font-size: $largest-fs;
     }
     .icon-right-desc {
@@ -217,51 +212,29 @@
     }
 }
 
+
+
 .like-block {
     width: 3rem;
-    input {
-        display: none;
-    }
     cursor: pointer;
-    .icon-hearts {
-        position: relative;
-    }
     .icon-heart-empty {
         font-size: $largest-fs;
     }
-    .icon-heart {
-        position: absolute;
-        top: -1px;
-        left: 0;
-        display: none;
-    }
-    .heart-label {
-        display: block;
-        cursor: pointer;
-    }
     .quantity-likes {
         display: block;
-        @include font-props(1.1rem, 300, #ff0000, 1.2rem);
+        @include font-props(1.1rem, 300, $red-color, 1.2rem);
         margin-left: .3rem;
         font-family: $main-family;
     }
-    #checkbox-icon-heart-empty:checked ~ .icon-heart,
-    #checkbox-icon-heart-empty-fondue:checked ~ .icon-heart-fondue, 
-    #checkbox-icon-heart-empty-alessi:checked ~ .icon-heart-alessi,
-    #checkbox-icon-heart-empty-sensann:checked ~ .icon-heart-sensann,
-    #checkbox-icon-heart-empty-fiji:checked ~ .icon-heart-fiji,
-    #checkbox-icon-heart-empty-tabano:checked ~ .icon-heart-tabano,
-    #checkbox-icon-heart-empty-potter:checked ~ .icon-heart-potter,
-    #checkbox-icon-heart-empty-p22:checked ~ .icon-heart-p22 {
-        display: block;
-    }
 }
+
+
 
 .potter-block {
     display: flex;
     justify-content: space-between;
     padding: 3.5rem 3rem 0 5rem;
-    background-color: #dfe0d9;
+    background-color: $dark-white;
     .view-block {
         margin: 1.5rem 0 0;
     }
@@ -282,25 +255,25 @@
         display: flex;
         cursor: pointer;
         .icon-right {
-            color: #fff;
+            color: $white-color;
             opacity: 0;
         }
     }
     &-text {
-        @include font-props(1.3rem, 400, #ffffff, 1.4rem);
+        @include font-props(1.3rem, 400, $white-color, 1.4rem);
         text-transform: uppercase;
         font-family: $main-family;
         margin-left: 1rem;
         display: block;
     }
     &-item:hover &-text {
-        color: #000;
+        color: $black-color;
     }
 }
 
 .projects-head {
     font-size: 4.8rem;
-    color: #fefefe;
+    color: $light-white;
     font-weight: 400;
     position: absolute;
     top: 60%;
@@ -324,7 +297,7 @@
 
 .tabano-block {
     padding: 3.5rem 5.5rem 3.5rem;
-    background-color: #e9eae2;
+    background-color: $lum-white;
 }
 
 .tabano-img {
@@ -358,10 +331,10 @@
     height: 103%;
     &-desc {
         .def-h2 {
-            color: #fff;
+            color: $white-color;
         }
         &-text {
-            @include font-props($main-fs, 300, #fefefe, 1.4rem);
+            @include font-props($main-fs, 300, $light-white, 1.4rem);
             max-width: 25.2rem;
             font-size: $main-fs;
             line-height: $main-fs;
@@ -369,20 +342,20 @@
             font-weight: 300;
             font-family: $main-family;
             text-transform: uppercase;
-            color: #fefefe;
+            color: $light-white;
             margin-top: 1.5rem;
         }
     }
     .view-block {
         margin-top: $largest-fs;
         &-text {
-            color: #ffffff;
+            color: $white-color;
         }
     }
     .like-block {
         margin: $largest-fs 0 0 5rem;
         .icon-heart-empty {
-            color: #fff;
+            color: $white-color;
         }
     }
     .louis-img {
@@ -396,7 +369,7 @@
     display: flex;
     padding: 6.5rem 6.6rem 0 9.5rem;
     position: relative;
-    background-color: #eaeaea;
+    background-color: $bright-white;
     &-desc {
         position: absolute;
         left: 35rem;
@@ -423,7 +396,7 @@
     display: flex;
     justify-content: space-between;
     padding: 3.5rem 4rem 0 3rem;
-    background-color: #fff;
+    background-color: $white-color;
     &-img {
         display: block;
         max-width: 19rem;
@@ -444,7 +417,7 @@
 
 .sensann-block {
     padding: 2.5rem 10.5rem;
-    background-color: #fff;
+    background-color: $white-color;
     &-desc {
         margin-top: 3rem;
         .def-h2 {
@@ -467,7 +440,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    background-color: #cecece;
+    background-color: $blond-white;
 }
 
 .alessi-desc {
@@ -497,15 +470,14 @@
 }
 
 .time-line-block {
-    background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
+    background-image: $linear-gradient;
     overflow: hidden;
-    background-color: #ebb240;
+    background-color: $yellow-color;
     position: relative;
     .container {
-        display: grid;
+        @include grid-props(grid, 49fr 20fr 31fr);
         height: 100%;
         width: 100%;
-        grid-template-columns: 49fr 20fr 31fr;
     }
     &-head {
         @include font-props($main-fs, 400, $main-color, 1.4rem);
@@ -523,30 +495,29 @@
     .projects {
         position: static;
         &-text-time {
-            @include font-props(1.3rem, 400, #ffffff, 1.4rem);
+            @include font-props(1.3rem, 400, $white-color, 1.4rem);
             font-family: $main-family;
             display: block;
             padding-left: 1rem;
         }
         &-item-time:hover .projects-text-time{
-            color: #000;
+            color: $black-color;
         }
     }
 }
 
 .studio {
     .container {
-        display: grid;
-        grid-template-columns: 31fr 69fr;
+        @include grid-props(grid, 31fr 69fr);
     }
     &-block {
-        background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
+        background-image: $linear-gradient;
         overflow: hidden;
-        background-color: #ff9b6d;
+        background-color: $orange-color;
         height: 100%;
         position: relative;
         &-head {
-            @include font-props(4.8rem, 400, #fefefe, 1.4rem);
+            @include font-props(4.8rem, 400, $light-white, 1.4rem);
             top: 55%;
             left: 50%;
             text-transform: uppercase;
@@ -555,7 +526,7 @@
         }
     }
     &-text {
-        background-color: #e9eae2;
+        background-color: $lum-white;
         padding: 7.5rem 11rem 0 11rem;
         display: flex;
         justify-content: space-between;
@@ -587,7 +558,7 @@
     &-line {
         width: 100%;
         height: .1rem;
-        background-color: #bfc0b9;
+        background-color: $grey-color;
         margin-top: .5rem;
     }
     &-desc {
@@ -605,18 +576,15 @@
 }
 
 .studio-designer {
-    background-color: #e9eae2;
+    background-color: $lum-white;
     padding: 10rem 0 0 0;
     .container {
-        display: grid;
-        grid-template-columns: 31fr 69fr;
+        @include grid-props(grid, 31fr 69fr);
     }
     &-desc {
         height: 40rem;
-        padding: 0 0 0 15rem; 
-        max-width: 27rem;
-        grid-column-start: 1fr;
-        grid-column-end: 2fr;;
+        padding: 0 0 0 19rem; 
+        max-width: 45rem;
         &-head {
             @include font-props($main-fs, 400, $main-color, 1.4rem);
             font-family: $main-family;
@@ -670,8 +638,8 @@
 
 .designer-block-social {
     .designer-icon {
-        color: #fd5000;
-        font-size: 16px;
+        color: $light-red;
+        font-size: 1.6rem;
     }
 }
 
@@ -679,27 +647,26 @@
     display: flex;
     align-items: center;
     &-text {
-        @include font-props($main-fs, 400, #fd5000, 1.6rem);
+        @include font-props($main-fs, 400, $light-red, 1.6rem);
         font-family: $main-family;
     }
     .icon-left {
-        color: #fd5000;
+        color: $light-red;
     }
 }
 
 .news {
-    display: grid;
-    grid-template-columns: 31fr 34.5fr 34.5fr;
+    @include grid-props(grid, 31fr 34.5fr 34.5fr);
     &-block {
         overflow: hidden;
         grid-column-start: 1;
-        background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
+        background-image: $linear-gradient;
         grid-column-end: 2;
         position: relative;
         height: 100%;
-        background-color: #d4edbf;
+        background-color: $light-grey;
         &-head {
-            @include font-props(4.8rem, 400, #ffffff, 1.4rem);
+            @include font-props(4.8rem, 400, $white-color, 1.4rem);
             position: absolute;
             top: 55%;
             left: 50%;
@@ -713,7 +680,7 @@
     padding: 6rem 10rem 0 10rem;
     grid-column-start: 2;
     grid-column-end: 4;
-    background-color: #e5e9df;
+    background-color: $lucid-white;
     &-list {
         display: flex;
         justify-content: space-between;
@@ -726,7 +693,7 @@
                 height: 4.5rem;
             }
             &-data {
-                @include font-props(1.2rem, 400, #6a6969, 2.5rem);
+                @include font-props(1.2rem, 400, $dark-grey, 2.5rem);
                 font-family: $main-family;
                 text-transform: uppercase;
             }
@@ -734,13 +701,13 @@
                 max-width: 38rem;
             }
             &-text {
-                @include font-props(1.2rem, 400, #6a6969, 1.4rem);;
+                @include font-props(1.2rem, 400, $dark-grey, 1.4rem);;
                 font-family: $main-family;
                 margin-top: 2rem;
                 height: 5rem;
             }
             &-read-more {
-                @include font-props(1.2rem, 400, #fd5000, 1.4rem);
+                @include font-props(1.2rem, 400, $light-red, 1.4rem);
                 font-family: $main-family;
                 text-transform: uppercase;
                 display: block;

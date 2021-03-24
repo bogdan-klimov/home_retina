@@ -18,7 +18,7 @@
 .navigation {
     background-color: #7acec3;
     position: relative;
-    background-image: linear-gradient(to bottom right, #0000 49.7%, #fff, #fff, #0000 50%);
+    background-image: linear-gradient(to bottom right, $green-color 49.7%, $white-color, $white-color, $green-color 50%);
     background-repeat: no-repeat;
 }
 
@@ -42,7 +42,7 @@
     display: flex;
     margin: 5.5rem 0 0 1rem;
     .icon {
-        color: #7bcbc1;
+        color: $green-color;
         font-size: 2.2rem;
     }
 }
@@ -60,7 +60,7 @@
     height: 100%;
     max-width: 12rem;
     max-height: 12rem;
-    border: 0.3rem solid #fff;
+    border: 0.3rem solid $white-color;
     position: absolute;
     cursor: pointer;
     z-index: 10;
@@ -82,8 +82,8 @@
     left: 50%; 
     margin-left: -2rem; 
     width: 4rem;
-    height: 0.3rem;
-    background-color: #fff;
+    height: 0.25rem;
+    background-color: $white-color;
     z-index: 10;
 }
 
@@ -125,14 +125,14 @@
 
 .nav-block {
     display: none;
-    li {
+    &-item {
         padding: 0 3.4rem;
     }
 }
 
 .nav-block-active {
     display: flex;
-    @include font-props($main-fs, 400, #ffffff, 2.5rem);
+    @include font-props($main-fs, 400, $white-color, 2.5rem);
     font-family: $main-family;
     text-transform: uppercase;
     padding: 5.1rem 14.5rem 4.6rem 5rem;
@@ -144,7 +144,7 @@
 }
 
 .nav-block-desc {
-    @include font-props(1.5rem, 400, #ffffff, 1.4rem);
+    @include font-props(1.5rem, 400, $white-color, 1.4rem);
     max-width: 12.5rem;
     text-transform: uppercase;
     position: absolute;
@@ -154,7 +154,7 @@
 }
 
 .nav-block-social {
-    @include font-props(1.5rem, 400, #ffffff, 1.4rem);
+    @include font-props(1.5rem, 400, $white-color, 1.4rem);
     max-width: 14rem;
     position: absolute;
     font-family: $main-family;

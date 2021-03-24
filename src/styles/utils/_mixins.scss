@@ -23,3 +23,13 @@
 	color: $color;
   line-height: $lineheight;
 }
+
+@mixin grid-props ($grid, $colums) {
+  display: $grid;
+  grid-template-columns: $colums;
+}
+
+@mixin transform-props ($translateY, $rotate) {
+    transform: translateY($translateY);
+    transform: rotate($rotate);
+}
